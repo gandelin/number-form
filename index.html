@@ -3,25 +3,22 @@
   <head>
     <title>Number Form</title>
     <meta charset="utf-8">
-    <link type="text/javascript" href="js/number-calc.js/">
+    <script type="text/javascript" src="js/number-calc.js"></script>
   </head>
   <body>
     <header>
       <h1>Number Form</h1>
     </header>
     <article>
-      <form name="numberForm" onsubmit="numberCalc()">
-        <span>
-          <label>
-            Number: 
-            <input type="text">
-          </label>
-          <button>Submit</button>
-          <button>Reset</button>
-        </span>
-        <label>Count: </label>
-        <label>Sum: </label>
-        <label>Ave: </label>
+      <form name="numberForm" onsubmit="putNumber(number.value)">
+        <label>Number: <input id="number" type="number" name="number"></label>
+          <input type="submit" value="Submit">
+          <input id="resetButton" type="button" value="Reset">
+        <h2>Results</h2>
+        <label>Numbers Submitted: <div id="numbersId"></div></label>
+        <label>Count: <div id="cnt"></div></label>
+        <label>Sum: <div id="sum"></div></label>
+        <label>Ave: <div id="ave"></div></label>
       </form>
     </article>
     <footer>
